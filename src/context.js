@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { storeProducts, detailProduct } from "./data";
+import React, {Component} from 'react';
+import {storeProducts, detailProduct} from "./data";
 import Details from "./components/Details";
 
 //create context object, has provider and consumer
@@ -11,10 +11,10 @@ class ProducerProvider extends Component {
     }
     handleDetail = () => {
         console.log('lhello from details');
-}
-addToCart = () =>{
-    console.log('lhello from add to Cart');
-}
+    };
+    addToCart = () => {
+        console.log('lhello from add to Cart');
+    };
     render() {
         return (
             <ProductContext.Provider value={{

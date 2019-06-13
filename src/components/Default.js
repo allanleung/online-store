@@ -4,7 +4,7 @@ class Default extends Component {
     render() {
         return (
             <div>
-                <h3> Hello from Details</h3>
+                <h3> Hello from Defaults</h3>
             </div>
         );
     }
