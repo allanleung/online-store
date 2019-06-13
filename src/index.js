@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
+import { default as App } from './App';
 import { BrowserRouter as Router } from "react-router-dom";
-import { ProducerProvider } from "./context";
+import { ProductProvider } from "./context";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-    <ProducerProvider>
+    <ProductProvider>
         <Router>
             <App />
         </Router>
-    </ProducerProvider>, document.getElementById('root')
+    </ProductProvider>, document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

@@ -8,7 +8,7 @@ import Details from "./components/Details";
 import Default from "./components/Default";
 import Cart from "./components/Cart";
 
-class App extends Component {
+export default class App extends Component {
     render() {
         return (
             <React.Fragment>
@@ -23,4 +23,3 @@ class App extends Component {
         );
     }
 }
-export default App;

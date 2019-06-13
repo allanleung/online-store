@@ -4,8 +4,7 @@ import Details from "./components/Details";
 
 //create context object, has provider and consumer
 const ProductContext = React.createContext();
-
-class ProducerProvider extends Component {
+class ProductProvider extends Component {
     state = {
         products: storeProducts, detailProduct: detailProduct
     }
@@ -30,4 +29,4 @@ class ProducerProvider extends Component {
 
 const ProductConsumer = ProductContext.Consumer;
 
-export {ProducerProvider, ProductConsumer}
+export {ProductProvider, ProductConsumer}
