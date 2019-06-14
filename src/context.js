@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {storeProducts, detailProduct} from "./data";
-import Details from "./components/Details";
+import {detailProduct, storeProducts} from "./data";
 //create context object, has provider and consumer
 const ProductContext = React.createContext();
 
@@ -9,11 +8,13 @@ const ProductContext = React.createContext();
 class ProductProvider extends Component {
     state = {
         products: storeProducts,
-        detailProduct: detailProduct
+        detailProduct: detailProduct,
+        cart:[]
     };
+
     componentDidMount() {
         this.setProduct();
-    }
+    };
 
     setProduct = () => {
         let tempProducts = [];
@@ -22,21 +23,39 @@ class ProductProvider extends Component {
             tempProducts = [...tempProducts, singleItem];
         });
         this.setState(() => {
-            return {products:tempProducts}
+            return {products: tempProducts}
         });
     };
 
-    handleDetail = () => {
-        console.log('lhello from details');
+    getItem = id => {
+        const product = this.state.products.find(item => item.id === id);
+        return product;
     };
-    addToCart = (id) => {
-        console.log(`hello from add to Cart.id is ${id}`);
+
+    handleDetail = id => {
+        const product = this.getItem(id);
+        this.setState(() => {
+            return {detailProduct: product}
+        });
     };
+    addToCart = id => {
+        let tempProduct = [...this.state.products];
+        const index = tempProduct.indexOf((this.getItem(id)));
+        const product = tempProduct[index];
+        product.inCart = true;
+        product.count = 1;
+        const price = product.price;
+        product.total = price;
+        this.setState(() => {
+            return {product: tempProduct, cart: [...this.state.cart, product]};
+        })
+    };
+
     render() {
         return (
             <ProductContext.Provider value={{
                 ...this.state,
-                handleDetails: this.handleDetail,
+                handleDetail: this.handleDetail,
                 addToCart: this.addToCart
             }}>
                 {this.props.children}
