@@ -66,7 +66,6 @@ class Details extends Component {
 
                                 {/* title */}
 
-
                             </div>
                         </div>
                     )

@@ -15,7 +15,9 @@ export default class ProductList extends Component {
             <React.Fragment>
                 <div className="py-5">
                     <div className="container">
-                        <Title name="Old and Broken" title="phones"/>
+                        <MainTitle>
+                            <Title name="Old and Broken" title="phones"/>
+                        </MainTitle>
                         <div className="row">
                             <ProductConsumer>
                                 {value => {
@@ -32,3 +34,7 @@ export default class ProductList extends Component {
         );
     }
 }
+
+const MainTitle = styled.div`
+  background: rgba(0, 0, 0, 0.1);
+`;
