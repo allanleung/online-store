@@ -5,11 +5,12 @@ const ProductContext = React.createContext();
 
 
 // assiging storeProduct as a array
+// cart should be empty array [], but for testing, we put all the store product
 class ProductProvider extends Component {
     state = {
         products: storeProducts,
         detailProduct: detailProduct,
-        cart:[],
+        cart:storeProducts,
         modalOpen: false,
         modalProduct: detailProduct,
         cartSubTotal: 0,
