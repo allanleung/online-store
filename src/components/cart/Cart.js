@@ -5,6 +5,8 @@ import EmptyCart from "./EmptyCart";
 import CartColumns from "./CartColumns"
 import CartList from "./CartList"
 
+
+// {/* if cart is empty, show stuff inside React.Fragment */}
 export default class Cart extends Component {
     render() {
         return (
@@ -12,7 +14,7 @@ export default class Cart extends Component {
                <ProductConsumer>
                    {value => {
                        const {cart} = value;
-                       {/* if cart is empty, show stuff insisde React.Fragment */}
+
                        if (cart.length > 0) {
                            return (
                                <React.Fragment>
