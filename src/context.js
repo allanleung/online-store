@@ -10,7 +10,7 @@ class ProductProvider extends Component {
     state = {
         products: storeProducts,
         detailProduct: detailProduct,
-        cart: storeProducts,
+        cart: [],
         modalOpen: false,
         modalProduct: detailProduct,
         cartSubTotal: 0,
@@ -36,6 +36,11 @@ class ProductProvider extends Component {
 
     clearCart = () => {
         console.log(`cart was cleared`)
+    }
+
+    addTotal = () => {
+        let subTotal = 0;
+        
     }
 
 
