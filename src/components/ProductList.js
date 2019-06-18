@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Product from "./Product";
 import Title from './Title';
-import { storeProducts } from "../data";
+import { storeProducts } from "../data2";
 import { ProductConsumer } from "../context";
 import styled from "styled-components";
 
@@ -16,7 +16,7 @@ export default class ProductList extends Component {
                 <div className="py-5">
                     <div className="container">
                         <MainTitle>
-                            <Title name="Old and Broken" title="phones"/>
+                            <Title name="Newbie Friendly" title="Plants"/>
                         </MainTitle>
                         <div className="row">
                             <ProductConsumer>

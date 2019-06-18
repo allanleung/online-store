@@ -1,27 +1,36 @@
-:root{
-  --mainBlue:#2a2a72;
-  --lightBlue:#009ffd;
-  --mainWhite:#f3f3f3;
-  --mainDark:#232528;
-  --mainYellow:#ffa400;
+:root {
+    --mainBlue: #2a2a72;
+    --lightBlue: #009ffd;
+    --mainWhite: #f3f3f3;
+    --mainDark: #232528;
+    --mainYellow: #ffa400;
+    --babyBlue: #479dcc;
+    --mainGreen: #19c165;
+    --lightOrange: #e2a44d;
+
+    --adobeDarkGreen: #32590B;
+    --adobeLightGreen: #748C1B;
+    --adobeLighterGreen: #BFB52A;
+    --adobeMainWhite: #F2F0F0;
+    --adobeDarkBrown: #401F1C;
 }
 
 body {
-  font-family: 'Oswald', sans-serif !important;
-  background: var(--mainWhite) !important;
-  color: var(--mainDark) !important;
+    font-family: 'Oswald', sans-serif !important;
+    background: var(--mainWhite) !important;
+    color: var(--mainDark) !important;
 }
 
 .text-title {
-  font-family: 'Permanent Marker', cursive;
-  letter-spacing: 0.3rem;
-  text-transform: uppercase;
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
 }
 
 .text-blue {
-  color: var(--mainBlue);
+    color: var(--mainBlue);
 }
 
 .text-bright {
-  color: var(--lightBlue);
+    color: var(--lightBlue);
 }

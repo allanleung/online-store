@@ -13,7 +13,7 @@ export default class Navbar extends Component {
                 Creative Commons (Attribution 3.0 Unported);
                 https://www.iconfinder.com/Makoto_msk */}
                 <Link to='/'>
-                    <img src={logo} height="42" width="42" alt="store" className="navbar-brand" />
+                    <img src={logo} height="50" width="50" alt="store" className="navbar-brand" />
                 </Link>
                 <ul className="navbar-nav align-items-center">
                  <li className="nav-item ml-5">
@@ -36,7 +36,7 @@ export default class Navbar extends Component {
 }
 
 const NavWrapper = styled.nav`
-    background: var(--mainBlue);
+    background: var(--adobeDarkGreen);
     .nav-link {
         color: var(--mainWhite)!important;
         font-size: 1.3rem;

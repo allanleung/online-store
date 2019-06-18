@@ -1,24 +1,28 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const ButtonContainer = styled.button`
-  background: transparent;
-  border: 0.05rem solid var(--lightBlue);
-  border-radius: 0.5rem;
-  border-color: ${props => props.cart ? "var(--mainYellow)" : "var(--lightBlue)"};
-  color: ${props => props.cart ? "var(--mainYellow)" : "var(--lightBlue)"};
-  cursor: pointer;
-  font-size: 1.2rem;
-  padding: 0.2rem 0.5rem;
-  margin: 0.2rem 0.5rem 0.2rem, 0;
-  transition: all 0.5s ease-in-out;
   text-transform: capitalize;
+  font-size: 1.3rem;
+  background: transparent;
+  border: 0.05rem solid var(--adobeLighterGreen);
+  border-color: ${props =>
+    props.cart ? "var(--mainYellow)" : "var(--adobeLighterGreen)"};
+  color: var(--lightBlue);
+  color: ${props => (props.cart ? "var(--mainYellow)" : "var(--adobeLighterGreen)")};
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  outline-color: red;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0.2rem 0.5rem 0.2rem 0;
+  transition: all 0.5s ease-in-out;
   &:hover {
-  background: var(--lightBlue);
-  background: ${props =>
-    props.cart ? "var(--mainYellow)" : "var(--lightBlue)"};
-  color: var(--mainBlue);
+    background: var(--lightBlue);
+    background: ${props =>
+    props.cart ? "var(--mainYellow)" : "var(--adobeMainWhite)"};
+    color: var(--adobeLighterGreen);
   }
-  &: focus {
-  outline: none;
+  &:focus {
+    outline: none;
   }
 `;

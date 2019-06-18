@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import {detailProduct, storeProducts} from "./data";
+import {detailProduct, storeProducts} from "./data2";
 //create context object, has provider and consumer
 const ProductContext = React.createContext();
-
 
 // assiging storeProduct as a array
 // cart should be empty array [], but for testing, we put all the store product
